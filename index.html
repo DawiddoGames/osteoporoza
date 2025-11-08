@@ -1,113 +1,122 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Osteoporoza – 7 klasa</title>
+  <meta charset="UTF-8">
+  <title>Jan Kochanowski – Prezentacja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      margin: 0;
-      font-family: "Comic Sans MS", cursive;
-      background: #e0f7fa;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f0f8ff; overflow: hidden; }
+    .slider {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 500%;
       height: 100vh;
-      overflow: hidden;
+      transition: transform .6s ease;
     }
     .slide {
-      display: none;
-      text-align: center;
+      width: 20%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       padding: 40px;
-      max-width: 700px;
+      text-align: center;
     }
-    .slide.active {
-      display: block;
+    .slide:nth-child(1) { background: #e8f4f8; }
+    .slide:nth-child(2) { background: #fff3cd; }
+    .slide:nth-child(3) { background: #d4edda; }
+    .slide:nth-child(4) { background: #f8d7da; }
+    .slide:nth-child(5) { background: #d1ecf1; }
+    h1 { color: #2c3e50; margin-bottom: 20px; }
+    p, ul { max-width: 600px; font-size: 1.2em; }
+    ul { text-align: left; }
+    .nav {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
     }
-    h1 {
-      font-size: 2.5em;
-      color: #00695c;
-    }
-    p {
-      font-size: 1.5em;
-      color: #004d40;
-    }
-    img {
-      width: 200px;
-      margin: 20px 0;
-    }
-    button {
-      font-size: 1.2em;
+    .nav button {
       padding: 10px 20px;
-      margin-top: 20px;
-      background: #00796b;
-      color: white;
+      font-size: 1.2em;
       border: none;
-      border-radius: 10px;
+      border-radius: 5px;
+      background: #3498db;
+      color: white;
       cursor: pointer;
     }
-    button:hover {
-      background: #004d40;
-    }
+    .nav button:disabled { background: #95a5a6; cursor: not-allowed; }
   </style>
 </head>
 <body>
 
-  <!-- Slajd 1 -->
-  <div class="slide active">
-    <h1>🦴 Co to jest osteoporoza?</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/2945/2945356.png" alt="kość">
-    <p>To choroba, przez którą kości stają się słabe i łatwo się łamią.</p>
-  </div>
-
-  <!-- Slajd 2 -->
+<div class="slider" id="slider">
   <div class="slide">
-    <h1>🧱 Kości to nie kamień!</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/2945/2945354.png" alt="kość">
-    <p>Kości żyją – rosną i się odnawiają. Ale bez wapnia słabną.</p>
+    <h1>Jan Kochanowski – „Ojciec poezji polskiej”</h1>
+    <p>Prezentacja dla 7 klasy szkoły podstawowej</p>
   </div>
 
-  <!-- Slajd 3 -->
   <div class="slide">
-    <h1>🧓 Kto może mieć osteoporozę?</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/706/706164.png" alt="starsza osoba">
-    <p>Najczęściej starsi, ale też młodzi, jeśli nie jedzą wapnia i mało się ruszają.</p>
+    <h1>Kim był?</h1>
+    <ul>
+      <li>Urodził się ok. 1530 r. w Sycynie.</li>
+      <li>Był poetą, tłumaczem i filozofem.</li>
+      <li>Pierwszy wielki pisarz w języku polskim.</li>
+    </ul>
   </div>
 
-  <!-- Slajd 4 -->
   <div class="slide">
-    <h1>🥛 Jak dbać o kości?</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/3141/3141328.png" alt="mleko">
-    <p>Pij mleko, jedz ser, biegaj, skacz – kości lubią ruch!</p>
+    <h1>Jego twórczość</h1>
+    <ul>
+      <li><strong>Fraszki</strong> – krótkie, mądre wierszyki.</li>
+      <li><strong>Treny</strong> – smutne wiersze po śmierci córki.</li>
+      <li><strong>Pieśni</strong> – piękne liryki.</li>
+      <li><strong>Odprawa posłów greckich</strong> – dramat.</li>
+    </ul>
   </div>
 
-  <!-- Slajd 5 -->
   <div class="slide">
-    <h1>🩻 Jak sprawdzić kości?</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/2938/2938147.png" alt="badanie">
-    <p>Lekarz robi zdjęcie kości – densytometrię – i mówi, czy są mocne.</p>
+    <h1>Przykład fraszki</h1>
+    <p><em>Zdrowie, nie w Twoich rękach jest,<br>
+    Choćbyś się o nie codzień troszczył...<br>
+    Często ten, co go pilnie strzeże,<br>
+    Traci je, a kto go nie szuka – ma.</em></p>
   </div>
 
-  <!-- Slajd 6 -->
   <div class="slide">
-    <h1>✅ Pamiętaj!</h1>
-    <img src="https://cdn-icons-png.flaticon.com/512/2936/2936857.png" alt="serce">
-    <p><strong>Mocne kości = mocny ja!</strong><br>Dbaj o nie już dziś!</p>
+    <h1>Podsumowanie</h1>
+    <p>Jan Kochanowski to wielki polski pisarz, który pokazał, że piękna poezja może być pisana po polsku. Jego wiersze są mądre, smutne i zabawne – do dziś je czytamy!</p>
   </div>
+</div>
 
-  <!-- Przycisk dalej -->
-  <button onclick="nextSlide()">Dalej →</button>
+<div class="nav">
+  <button id="prevBtn" onclick="changeSlide(-1)">◀ Wstecz</button>
+  <button id="nextBtn" onclick="changeSlide(1)">Dalej ▶</button>
+</div>
 
-  <script>
-    let current = 0;
-    const slides = document.querySelectorAll('.slide');
+<script>
+  let current = 0;
+  const slider = document.getElementById('slider');
+  const total = 5;
 
-    function nextSlide() {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }
-  </script>
+  function updateButtons() {
+    document.getElementById('prevBtn').disabled = current === 0;
+    document.getElementById('nextBtn').disabled = current === total - 1;
+  }
+
+  function changeSlide(direction) {
+    current += direction;
+    if (current < 0) current = 0;
+    if (current >= total) current = total - 1;
+    slider.style.transform = `translateX(-${current * 20}%)`;
+    updateButtons();
+  }
+
+  updateButtons();
+</script>
 
 </body>
 </html>
