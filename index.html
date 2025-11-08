@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Osteoporoza – 7 klasa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", cursive;
+      background: #e0f7fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+      text-align: center;
+      padding: 40px;
+      max-width: 700px;
+    }
+    .slide.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #00695c;
+    }
+    p {
+      font-size: 1.5em;
+      color: #004d40;
+    }
+    img {
+      width: 200px;
+      margin: 20px 0;
+    }
+    button {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background: #00796b;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slajd 1 -->
+  <div class="slide active">
+    <h1>🦴 Co to jest osteoporoza?</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/2945/2945356.png" alt="kość">
+    <p>To choroba, przez którą kości stają się słabe i łatwo się łamią.</p>
+  </div>
+
+  <!-- Slajd 2 -->
+  <div class="slide">
+    <h1>🧱 Kości to nie kamień!</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/2945/2945354.png" alt="kość">
+    <p>Kości żyją – rosną i się odnawiają. Ale bez wapnia słabną.</p>
+  </div>
+
+  <!-- Slajd 3 -->
+  <div class="slide">
+    <h1>🧓 Kto może mieć osteoporozę?</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/706/706164.png" alt="starsza osoba">
+    <p>Najczęściej starsi, ale też młodzi, jeśli nie jedzą wapnia i mało się ruszają.</p>
+  </div>
+
+  <!-- Slajd 4 -->
+  <div class="slide">
+    <h1>🥛 Jak dbać o kości?</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/3141/3141328.png" alt="mleko">
+    <p>Pij mleko, jedz ser, biegaj, skacz – kości lubią ruch!</p>
+  </div>
+
+  <!-- Slajd 5 -->
+  <div class="slide">
+    <h1>🩻 Jak sprawdzić kości?</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/2938/2938147.png" alt="badanie">
+    <p>Lekarz robi zdjęcie kości – densytometrię – i mówi, czy są mocne.</p>
+  </div>
+
+  <!-- Slajd 6 -->
+  <div class="slide">
+    <h1>✅ Pamiętaj!</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/2936/2936857.png" alt="serce">
+    <p><strong>Mocne kości = mocny ja!</strong><br>Dbaj o nie już dziś!</p>
+  </div>
+
+  <!-- Przycisk dalej -->
+  <button onclick="nextSlide()">Dalej →</button>
+
+  <script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function nextSlide() {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
